@@ -16,7 +16,7 @@ function App() {
     
   }
   
-  let getBackgroundColor = () => {
+  const getBackgroundColor = () => {
     let color ='red';
     if (count % 2 === 0) {
       color = 'red';
@@ -27,13 +27,8 @@ function App() {
 };
 
   return (
-    <div className="App"
-         style={{
-                  backgroundColor: getBackgroundColor()
-               }}
-    >
-      <div className="current-number" 
-      >{count}</div>
+    <div className="App" style={ { backgroundColor: getBackgroundColor() } }>
+      <div className="current-number">{count}</div>
       <div>
         { count % 2 === 0 ? 'Введено четное число' : 'Введено нечетное число' }
       </div>
