@@ -11,6 +11,10 @@ function App() {
     } 
   }
 
+  function increment() {
+      setCount(count + 1); 
+  }
+
   return (
     <div className="App">
       <div className="current-number">{count}</div>
@@ -18,7 +22,7 @@ function App() {
       <div>
         <button onClick={decrement}>-</button>
         <button onClick={() => setCount(0)}>Reset</button>
-        <button onClick={() => setCount(count + 1)}>+</button>
+        <button onClick={increment}>+</button>
       </div>
     </div>
   );
