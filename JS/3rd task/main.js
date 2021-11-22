@@ -1,13 +1,11 @@
 function filterStrings(arr, length) {
-    var i = 0;
-    while (i < arr.length) {
-    if (arr[i].length > length) {
-      arr.splice(i, 1);
-    } else {
-      ++i;
+    for(let x = 0; x < arr.length; x++) {
+        if(arr[x].length > length) {
+            arr.splice(x, 1);
+        }
     }
-  }
-  return arr;
+    return arr;
 }
 
+console.log(filterStrings(['I love JS', 'some very long string', 'hell'], 9));
 console.log(filterStrings(['a', 'ab', 'abc'], 2));
